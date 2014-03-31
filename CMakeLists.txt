@@ -9,9 +9,9 @@ SET(CMAKE_CXX_FLAGS_RELEASE "-O2 -Wno-deprecated -ftree-vectorize")
 SET(CMAKE_CXX_FLAGS_DEBUG "-g")
 SET(CMAKE_BUILD_TYPE Release)
 
-if(${CMAKE_COMPILER_IS_GNUCXX})
+#if(${CMAKE_COMPILER_IS_GNUCXX})
 	add_definitions(-std=c++11)
-endif()
+#endif()
 
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
 
