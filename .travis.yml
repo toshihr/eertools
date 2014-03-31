@@ -8,7 +8,9 @@ before_install:
     - cd CppUTest/
     - ./configure
     - make
-    - export CPPUTEST_HOME=$PWD/CppUTest
+    - export CPPUTEST_HOME=$PWD
+    - export CXXFLAGS="${CXXFLAGS} -I$PWD/include"
+    - export LDFLAGS="${LDFLAGS} -L$PWD/lib"
     - cd ..
 install:
 # libstdc++-4.8-dev
