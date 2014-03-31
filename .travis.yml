@@ -3,7 +3,11 @@ compiler:
     - clang
     - gcc
 before_install:
-    - sudo apt-get update -qq
-    - sudo apt-get install -qq cmake cpputest libcpputest-dev
+    - git clone git@github.com:cpputest/cpputest.git
+    - cd cpputest/
+    - ./configure
+    - make
+    - export CPPUTEST_HOME=$PWD/cpputest
+    - cd ..
 script:
     - cmake . && make && make test
