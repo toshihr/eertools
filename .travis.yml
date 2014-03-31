@@ -4,10 +4,11 @@ compiler:
     - gcc
 before_install:
     - git clone git://github.com/cpputest/cpputest.git
-    - cd cpputest/
+    - mv cpputest CppUTest
+    - cd CppUTest/
     - ./configure
     - make
-    - export CPPUTEST_HOME=$PWD/cpputest
+    - export CPPUTEST_HOME=$PWD/CppUTest
     - cd ..
 install:
 # libstdc++-4.8-dev
