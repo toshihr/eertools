@@ -1,4 +1,4 @@
-EERTools
+EERTools [![Build Status](https://travis-ci.org/kerug/eertools.svg?branch=master)](https://travis-ci.org/kerug/eertools)
 ========
 Utility library for the Entropy Evolution Rate. This library implements the following functions:
 
