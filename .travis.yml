@@ -20,4 +20,6 @@ install:
     - sudo apt-get -qq update
     - sudo apt-get -qq install libstdc++-4.8-dev clang-3.2
 script:
-    - cmake . && make && make test
+    - mkdir build
+    - cd build
+    - cmake .. && make && make test

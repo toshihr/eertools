@@ -33,5 +33,5 @@ Testing
 # Backup files
 *~
 
-# binary
-bin
+# build directory
+build/*
