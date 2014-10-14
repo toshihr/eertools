@@ -33,5 +33,5 @@ Testing
 # Backup files
 *~
 
-# build directory
-build/*
+# Build files
+build/test/

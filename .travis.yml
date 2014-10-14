@@ -4,14 +4,13 @@ compiler:
     - gcc
 before_install:
     - git clone git://github.com/cpputest/cpputest.git
-    - mv cpputest CppUTest
-    - cd CppUTest/
-    - ./configure
+    - cd cpputest/cpputest_build
+    - cmake ..
     - make
     - export CPPUTEST_HOME=$PWD
     - export CXXFLAGS="${CXXFLAGS} -I$PWD/include"
     - export LDFLAGS="${LDFLAGS} -L$PWD/lib"
-    - cd ..
+    - cd ../..
 install:
 # libstdc++-4.8-dev
     - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
