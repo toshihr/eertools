@@ -6,7 +6,7 @@ endif(COMMAND cmake_policy)
 PROJECT(EERTOOLS CXX)
 
 # === VERSION ===
-SET(VERSION "1.0.0")
+SET(VERSION "1.0.1")
 SET(SOVERSION "1")
 
 # === COMPILE OPTIONS ===
