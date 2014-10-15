@@ -9,7 +9,7 @@ before_install:
     - cd cpputest/cpputest_build
     - cmake ..
     - make
-    - make install
+    - sudo make install
     - export CPPUTEST_HOME=/usr/local
     - export CXXFLAGS="${CXXFLAGS} -I$CPPUTEST_HOME/include"
     - export LDFLAGS="${LDFLAGS} -L$CPPUTEST_HOME/lib"
