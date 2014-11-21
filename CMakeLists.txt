@@ -1,6 +1,9 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.7)
 if(COMMAND cmake_policy)
 	cmake_policy(SET CMP0003 NEW)
+	if(POLICY CMP0042)
+		cmake_policy(SET CMP0042 NEW)
+	endif()
 endif(COMMAND cmake_policy)
 
 PROJECT(EERTOOLS CXX)

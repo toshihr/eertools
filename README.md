@@ -8,6 +8,16 @@ Utility library for the Entropy Evolution Rate. This library implements the foll
  * Entropic Chaos Degree
  * Lyapunov Exponent
 
+Install
+-------
+
+```sh
+$ cd build
+$ cmake ..
+$ make
+$ make install
+```
+
 References
 ----------
 

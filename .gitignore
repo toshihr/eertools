@@ -34,4 +34,5 @@ Testing
 *~
 
 # Build files
-build/test/
+build/*
+!build/*.sh
