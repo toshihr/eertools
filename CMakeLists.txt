@@ -8,6 +8,8 @@ endif(COMMAND cmake_policy)
 
 PROJECT(EERTOOLS CXX)
 
+SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+
 # === VERSION ===
 SET(VERSION "1.0.1")
 SET(SOVERSION "1")
@@ -30,17 +32,14 @@ else()
 endif()
 
 # === CPPUTEST ===
-if(DEFINED ENV{CPPUTEST_HOME})
-	MESSAGE("Using CppUTest found in $ENV{CPPUTEST_HOME}")
-else()
-	message("CPPUTEST_HOME is not set; You must tell CMake where to find CppUTest")
-	return()
-endif()
+find_package(CppUTest)
 
 ADD_SUBDIRECTORY(src)
-ADD_SUBDIRECTORY(test)
-ENABLE_TESTING()
-ADD_TEST(NAME MyTest COMMAND Test)
+if(CPPUTEST_FOUND)
+	ADD_SUBDIRECTORY(test)
+	ENABLE_TESTING()
+	ADD_TEST(NAME MyTest COMMAND Test)
+endif()
 
 
 # References
